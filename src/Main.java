@@ -1,17 +1,24 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //Перевіряє чи є символ цифрою
+        System.out.println(Character.isDigit('X'));
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //Завдання #2
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        String unicodeHex1 = "1F624"; // Код "U+1F624" без префикса "U+"
+        String unicodeHex2 = "263B";
+        String unicodeHex3 = "1F608";
+
+        int codePoint1 = Integer.parseInt(unicodeHex1, 16);
+        int codePoint2 = Integer.parseInt(unicodeHex2, 16);
+        int codePoint3 = Integer.parseInt(unicodeHex3, 16);
+
+        String emoji1 = new String(Character.toChars(codePoint1));
+        String emoji2 = new String(Character.toChars(codePoint2));
+        String emoji3 = new String(Character.toChars(codePoint3));
+
+        System.out.println(emoji1);
+        System.out.println(emoji2);
+        System.out.println(emoji3);
     }
 }
