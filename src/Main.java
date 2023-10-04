@@ -20,5 +20,35 @@ public class Main {
         System.out.println(emoji1);
         System.out.println(emoji2);
         System.out.println(emoji3);
+
+        //Завдання 3
+        int currentYear = 2023;
+
+        String MyDate = "Четверг, 21 Вересня 2022";
+        System.out.println(MyDate);
+        String[] MyStringDate = MyDate.split(" ");
+        String MyStringYear = MyStringDate[3];
+        boolean check = false;
+        for (char c : MyStringYear.toCharArray()){
+            if (Character.isDigit(c)){
+                check = true;
+            }
+            else{
+                check = false;
+                break;
+            }
+        }
+        if (check){
+            int MyYear = Integer.parseInt(MyStringYear);
+            if (MyYear == currentYear){
+                System.out.println("Ця дата належить поточному року");
+            }
+            else{
+                System.out.println("Ця дата не належить поточному року!");
+            }
+        }
+        else {
+            System.out.println("Рядок не є числом");
+        }
     }
 }
